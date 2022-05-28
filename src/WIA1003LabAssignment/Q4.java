@@ -11,6 +11,8 @@ The letter returned by the procedure should be according to the following ranges
 70 to 79 ------ C
 60 to 69 ------ D
 0 to 59 -------- F
+*
+* 或者用一个switch啊
 * */
 public class Q4 {
     public static void main(String[] args) {
