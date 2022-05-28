@@ -11,9 +11,10 @@ import java.util.Scanner;
 * */
 public class Q1 {
     public static void main(String[] args) {
-//        int[]arr={0,2,5,9,10};
-//        System.out.println(getGapSum(arr));
+        int[]arr={0,2,5,9,10};
+        System.out.println(getGapSum(arr));
 
+        //下面是可以动输入数字计算间隔
         int[]array =new int[100];
         Scanner in = new Scanner(System.in);
         while (in.hasNext()){
