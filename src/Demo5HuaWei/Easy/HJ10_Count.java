@@ -27,12 +27,12 @@ import java.util.Scanner;
 * */
 public class HJ10_Count {
     public static void main(String[] args) {
-        getCount1();
         getCount2();//本身字符就是在Ascii码0-127范围内，不用判断
     }
 
     private static void getCount2() {
         Scanner in = new Scanner(System.in);
+        //set不能添加重复的元素
         HashSet<Character> hs = new HashSet<>();
         while (in.hasNext()){
             String str = in.nextLine();
@@ -43,15 +43,11 @@ public class HJ10_Count {
             //2个for循环二选一都一样
             for (char aChar : chars) {
                 //本身字符就是在Ascii码0-127范围内，不用判断也可以
-                if (aChar >= 0 && aChar <= 127) {
+                if (aChar > 0 && aChar <= 127) {
                     hs.add(aChar);
                 }
             }
             System.out.println(hs.size());
         }
-    }
-
-    private static void getCount1() {
-
     }
 }

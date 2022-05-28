@@ -20,10 +20,37 @@ import java.util.Scanner;
     10
     12
 * */
-public class HJ40_countString {
+public class HJ40_countString_Type {
     public static void main(String[] args) {
 
-        getAllCount();
+        getAllCount();//我的方法
+        getAllCount2();//别人的也可以
+    }
+
+    private static void getAllCount2() {
+        Scanner sc = new Scanner(System.in);
+        while(sc.hasNext()) {
+            String str = sc.nextLine();
+            int eng=0;
+            int blank=0;
+            int number=0;
+            int other=0;
+            for(char ch:str.toCharArray()){
+                if(Character.isLetter(ch)){
+                    eng++;
+                }else if(Character.isDigit(ch)){
+                    number++;
+                }else if(Character.isSpaceChar(ch)){
+                    blank++;
+                }else {
+                    other++;
+                }
+            }
+            System.out.println(eng);
+            System.out.println(blank);
+            System.out.println(number);
+            System.out.println(other);
+        }
     }
 
     private static void getAllCount() {

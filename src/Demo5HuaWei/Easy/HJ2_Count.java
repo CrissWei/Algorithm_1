@@ -80,6 +80,7 @@ public class HJ2_Count {
         Scanner s = new Scanner(System.in);
         String input1 = s.nextLine();
         String input2 = s.nextLine();
+        //如replaceAll("Cris","ZW520");意思是用ZW520代替全部的Cris
         String split3 = input1.toUpperCase().replaceAll(input2.toUpperCase(), "");
         System.out.println(input1.length() - split3.length());
     }
