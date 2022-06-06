@@ -20,23 +20,29 @@ public class Q4 {
     }
 
     private static void getABC() {
+        System.out.print("Enter marks (0-100): ");
         Scanner in = new Scanner(System.in);
         while (in.hasNext()) {
             int num = in.nextInt();
             if (num >= 90 && num <= 100) {
-                System.out.println('A');
+                System.out.println("Grade: A");
+                System.out.print("Enter marks (0-100): ");
                 //break;
             } else if (num >= 80 && num < 90) {
-                System.out.println('B');
+                System.out.println("Grade: B");
+                System.out.print("Enter marks (0-100): ");
                 //break;
             } else if (num >= 70 && num < 80) {
-                System.out.println('C');
+                System.out.println("Grade: C");
+                System.out.print("Enter marks (0-100): ");
                 //break;
             } else if (num >= 60 && num < 70) {
-                System.out.println('D');
+                System.out.println("Grade: D");
+                System.out.print("Enter marks (0-100): ");
                 //break;
             } else {
-                System.out.println('F');
+                System.out.println("Grade: F");
+                System.out.print("Enter marks (0-100): ");
             }
         }
     }
