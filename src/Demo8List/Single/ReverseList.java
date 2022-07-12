@@ -22,7 +22,6 @@ package Demo8List.Single;
 说明：空链表则输出空
 * */
 
-import java.util.Scanner;
 //内部类
 class ListNode {
     int val;

@@ -14,15 +14,21 @@ import java.util.Scanner;
 * */
 public class HJ96 {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        while (in.hasNextLine()){
-            String next = in.nextLine();
-            method1(next);
-        }
+        //method2();
+
+        System.out.println(markNums("Jkdi234klowe90a3"));
 
     }
+    private static void method2() {
+        Scanner in = new Scanner(System.in);
+        String s = in.nextLine();
+        String s1 = s.replaceAll("(\\d+)", "*$1*");
+        System.out.println(s1);
+        //上面4行全部合成一行代码
+        System.out.println( new Scanner(System.in).nextLine().replaceAll("(\\d+)", "*$1*"));
+    }
 
-
+    //没完成的方法
     private static void method1(String str) {
         StringBuilder sb = new StringBuilder();
         char[] chars = str.toCharArray();
@@ -31,8 +37,20 @@ public class HJ96 {
                 String s = sb.append('*').append(chars[i]).append('*').toString();
                 System.out.println(s);
             }
-
         }
+    }
 
+
+    //将数字周围都加上*  两个数字中间肯定有两个** 然后替换掉就行了
+    public static String markNums(String pInStr) {
+        char[] arr = pInStr.toCharArray();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < arr.length; i++) {
+            if ((arr[i]  >= '0') && (arr[i] <= '9')) { // 判断为数字
+                sb.append("*" + arr[i] + "*");  //两边都加上*
+            } else
+                sb.append(arr[i]);
+        }
+        return sb.toString().replace("**", "");  //两个数字中间有** 替换掉
     }
 }

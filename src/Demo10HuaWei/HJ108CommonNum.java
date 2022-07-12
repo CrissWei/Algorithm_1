@@ -36,7 +36,7 @@ public class HJ108CommonNum {
             for (int i = Math.min(A,B); i >0 ; i--) {
                 if (A%i==0 && B%i==0){
                     System.out.println(A*B/i);
-                    break; //一旦满足条件必须马上终止，不然还有其他公倍数
+                    break;
                 }
             }
         }
@@ -51,7 +51,7 @@ public class HJ108CommonNum {
             for(int i = 1; i <= n1*n2;i++){
                 if(i % n1 == 0 && i % n2 == 0){
                     System.out.println(i);
-                    break;
+                    break; //一旦满足条件必须马上终止，不然还有其他公倍数
                 }
             }
         }

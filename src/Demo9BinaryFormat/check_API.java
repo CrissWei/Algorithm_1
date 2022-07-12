@@ -1,4 +1,4 @@
-package Demo9;
+package Demo9BinaryFormat;
 //查看源码的注释，熟悉API的用法
 public class check_API {
     public static void main(String[] args) {
